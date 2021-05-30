@@ -1,10 +1,13 @@
 const express = require("express");
 const server = express();
 const routes = require("./routes");
+const path = require("path");
 
 // usando a template engine
 
 server.set("view engine", "ejs")
+
+server.set('views', path.join(__dirname, 'views'));
 
 // ativar o req.body
 
