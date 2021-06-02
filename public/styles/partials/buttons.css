@@ -3,7 +3,7 @@
   border-radius: 0.313rem;
   border: 0;
 
-  font-family: IBM Plex Sans;
+  font-family: "Inter";
   font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.625rem;
@@ -28,7 +28,8 @@ button.button {
 }
 
 .button.orange:hover {
-  background: #FA9C2D
+  background: #FA9C2D;
+  box-shadow: 0px 0px 10px #ffb96a
 }
 
 .button.green {

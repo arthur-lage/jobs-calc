@@ -11,7 +11,7 @@ module.exports = {
     let statusCount = {
       progress: 0,
       done: 0,
-      total: await Job.get().length,
+      total: jobs.length > 0 ? jobs.length : 0,
     };
 
     let jobTotalHours = 0

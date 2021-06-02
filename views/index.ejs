@@ -32,11 +32,8 @@
           <img id="logo" src="/images/logo.svg" alt="Logo" />
           <span id="notification">
             <img src="/images/alert-octagon.svg" alt="Alerta" />
-            <% if(freeHours <= 0) { %>
-              Você não possui horas livres.
-            <% } else { %>
-              Você tem <%= freeHours %>  horas livres no seu dia.
-            <% } %>  
+            <% if(freeHours <= 0) { %> Você não possui horas livres. <% } else {
+            %> Você tem <%= freeHours %> horas livres no seu dia. <% } %>
           </span>
           <a href="/profile" id="avatar-profile">
             <p><%= profile.name %> <span>Ver perfil</span></p>
@@ -76,6 +73,12 @@
     <div class="container">
       <main class="animate-up delay-2">
         <h1 class="sr-only">Trabalhos</h1>
+
+        <% if(jobs.length <= 0) { %>
+
+        <div class="no-jobs">Você ainda não possui nenhum job!</div>
+
+        <% } else { %>
 
         <div class="cards">
           <% jobs.forEach((job) => { %>
@@ -117,6 +120,7 @@
 
           <!-- end card -->
         </div>
+        <% } %>
         <!-- end cards -->
       </main>
     </div>
